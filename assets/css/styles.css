@@ -1,8 +1,13 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
-  --primary-color: #ffb900;
+  --Primary-color-black-green: #143c3c;
+  --Primary-color-black: #152427;
+  --secondary-color: #83a17d;
+  --text-color-black-gray: #575d5e;
+  --text-color-white: #ffffff;
 }
 
 html {
@@ -24,6 +29,7 @@ a,
 button {
   font-family: sans-serif;
 }
+
 a {
   text-decoration: none;
 }
@@ -33,4 +39,105 @@ a {
   max-width: calc(100% - 48px);
   margin-left: auto;
   margin-right: auto;
+}
+
+.btn {
+  min-width: 173px;
+  padding: 16.5px 52.1px;
+  color: var(--text-color-white);
+  text-align: center;
+  font-family: "Public Sans";
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-radius: 40px;
+  border: 1.5px solid #143c3c;
+  background: var(--Primary-color-black-green, #143c3c);
+  transition: opacity 0.25s ease-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Header */
+.header--fixed {
+  position: sticky;
+  top: -15px;
+}
+
+.header {
+  padding-top: 15px;
+
+  background-color: var(--text-color-white);
+}
+
+.header__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+}
+
+.header__inner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #dddcdc 51.09%,
+    rgba(212, 212, 212, 0) 99.68%
+  );
+}
+
+.header__logo-link {
+  flex: 1;
+}
+
+.header__actions {
+  margin-left: 69px;
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__item-link {
+  display: inline-block;
+  padding: 16px 19px;
+  color: var(--text-color-black-gray);
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.555;
+}
+
+.navbar__item-link--active {
+  position: relative;
+  color: var(--Primary-color-black);
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__item-link--active::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -13px;
+  display: inline-block;
+  height: 2px;
+  width: 16px;
+  background: var(--Primary-color-black-green, #143c3c);
+  z-index: 1;
+}
+
+.navbar__item-link:hover {
+  color: var(--Primary-color-black);
+  text-shadow: 1px 0 0 currentColor;
 }
