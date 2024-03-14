@@ -246,15 +246,18 @@ a {
 
 .hero__img:nth-child(2) {
   margin-top: 77px;
+  z-index: 1;
 }
 
-.decor {
-  display: flex;
-}
-
-.decor__flower {
+.hero__decor-top {
   position: absolute;
   top: -32px;
+  left: -204px;
 }
-.decor__line {
+
+.hero__decor-bottom {
+  position: absolute;
+  right: 9px;
+  bottom: -87px;
+  rotate: 175.95deg;
 }
