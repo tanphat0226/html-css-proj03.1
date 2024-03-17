@@ -397,6 +397,18 @@ a {
 .service__item {
   user-select: none;
 }
+
+.service__item:hover {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
+}
+
+.service__item:hover .service__item-title,
+.service__item:hover .service__item-desc {
+  transform: translateX(18px);
+}
+
 .service__thumb {
   position: relative;
   overflow: hidden;
@@ -442,14 +454,17 @@ a {
   font-size: 2.2rem;
   font-weight: 600;
   line-height: 1;
+  transition: transform 0.25s;
 }
 
 .service__item-desc {
   margin-top: 18px;
+  padding-bottom: 22px;
   width: 268px;
   color: var(--text-color-light-gray, #7d8188);
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 2.4rem; /* 171.429% */
+  line-height: 1.72;
+  transition: transform 0.25s;
 }
