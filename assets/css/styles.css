@@ -998,10 +998,6 @@ a {
     background-color: var(--Primary-color-black-green);
   }
 
-  .blog-item__title {
-    padding-right: 60px;
-  }
-
   .blog-item__separate,
   .blog-item__title,
   .blog-item__btn {
@@ -1036,7 +1032,8 @@ a {
   transition-duration: 0.25s;
 }
 
-.blog-item__title {
+.blog-item__title-link {
+  display: inline-block;
   width: 100%;
   margin-top: 13px;
   color: var(--Primary-color-black-green, #143c3c);
