@@ -975,6 +975,7 @@ a {
 
 .blog-item {
   width: 360px;
+  min-height: 550px;
 }
 
 .blog-item__thumb {
